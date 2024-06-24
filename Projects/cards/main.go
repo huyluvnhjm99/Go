@@ -3,9 +3,12 @@ package main
 import "fmt"
 
 func main() {
-	printText("heelo")
-}
+	cards := newDeck()
 
-func printText(text string) {
-	fmt.Println(text)
+	hand, remainingCards := deal(cards, 5)
+
+	fmt.Println("Cards in hand: ")
+	hand.print()
+	fmt.Println("Cards remaining: ")
+	remainingCards.print()
 }
