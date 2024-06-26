@@ -33,8 +33,8 @@ func main() {
 	mrX.print()
 }
 
-func (p person) updateName(name string) {
-	p.firstname = name
+func (pPerson *person) updateName(name string) {
+	(*pPerson).firstname = name
 }
 
 func (p person) print() {
